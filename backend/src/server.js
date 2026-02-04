@@ -15,7 +15,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-dotenv.config({ path: path.resolve(__dirname, '../.env') });
+dotenv.config();
 
 connectDB();
 
@@ -23,9 +23,21 @@ const app = express();
 
 app.use(helmet());
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: (origin, callback) => {
+    const allowedOrigins = [
+      process.env.CLIENT_URL,
+      'http://localhost:5173',
+      'http://localhost:3000'
+    ];
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
+
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
