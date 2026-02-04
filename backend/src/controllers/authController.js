@@ -1,27 +1,16 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User.js';
 
-/**
- * Generate JWT Token
- * @param {String} id - User ID
- * @returns {String} - JWT token
- */
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRE
   });
 };
 
-/**
- * @desc    Register new user
- * @route   POST /api/v1/auth/register
- * @access  Public
- */
+
 export const register = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;
-
-    // Check if user already exists
     const userExists = await User.findOne({ email });
     if (userExists) {
       return res.status(400).json({
@@ -30,15 +19,12 @@ export const register = async (req, res) => {
       });
     }
 
-    // Create user
     const user = await User.create({
       name,
       email,
       password,
-      role: role || 'user' // Default to 'user' if not specified
+      role: role || 'user'
     });
-
-    // Generate token
     const token = generateToken(user._id);
 
     res.status(201).json({
@@ -65,19 +51,11 @@ export const register = async (req, res) => {
   }
 };
 
-/**
- * @desc    Login user
- * @route   POST /api/v1/auth/login
- * @access  Public
- */
+
 export const login = async (req, res) => {
   try {
     const { email, password } = req.body;
-
-    // Find user and include password field
     const user = await User.findOne({ email }).select('+password');
-
-    // Check if user exists
     if (!user) {
       return res.status(401).json({
         success: false,
@@ -85,7 +63,6 @@ export const login = async (req, res) => {
       });
     }
 
-    // Check if user is active
     if (!user.isActive) {
       return res.status(401).json({
         success: false,
@@ -93,7 +70,6 @@ export const login = async (req, res) => {
       });
     }
 
-    // Check if password matches
     const isPasswordCorrect = await user.comparePassword(password);
     if (!isPasswordCorrect) {
       return res.status(401).json({
@@ -102,7 +78,6 @@ export const login = async (req, res) => {
       });
     }
 
-    // Generate token
     const token = generateToken(user._id);
 
     res.status(200).json({
@@ -129,11 +104,6 @@ export const login = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get current logged in user
- * @route   GET /api/v1/auth/me
- * @access  Private
- */
 export const getMe = async (req, res) => {
   try {
     const user = await User.findById(req.user._id);
@@ -161,11 +131,7 @@ export const getMe = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get all users (admin only)
- * @route   GET /api/v1/auth/users
- * @access  Private/Admin
- */
+
 export const getAllUsers = async (req, res) => {
   try {
     const users = await User.find().select('-password');

@@ -1,15 +1,7 @@
 import Task from '../models/Task.js';
-
-/**
- * @desc    Create new task
- * @route   POST /api/v1/tasks
- * @access  Private
- */
 export const createTask = async (req, res) => {
   try {
     const { title, description, status, priority, dueDate } = req.body;
-
-    // Create task with current user as creator
     const task = await Task.create({
       title,
       description,
@@ -18,8 +10,6 @@ export const createTask = async (req, res) => {
       dueDate,
       createdBy: req.user._id
     });
-
-    // Populate creator information
     await task.populate('createdBy', 'name email');
 
     res.status(201).json({
@@ -39,44 +29,25 @@ export const createTask = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get all tasks
- * @route   GET /api/v1/tasks
- * @access  Private
- */
 export const getTasks = async (req, res) => {
   try {
     const { status, priority, page = 1, limit = 10 } = req.query;
-
-    // Build query
     let query = {};
-
-    // Non-admin users can only see their own tasks
     if (req.user.role !== 'admin') {
       query.createdBy = req.user._id;
     }
-
-    // Filter by status if provided
     if (status) {
       query.status = status;
     }
-
-    // Filter by priority if provided
     if (priority) {
       query.priority = priority;
     }
-
-    // Calculate pagination
     const skip = (page - 1) * limit;
-
-    // Execute query with pagination
     const tasks = await Task.find(query)
       .populate('createdBy', 'name email')
       .sort({ createdAt: -1 })
       .skip(skip)
       .limit(parseInt(limit));
-
-    // Get total count for pagination
     const total = await Task.countDocuments(query);
 
     res.status(200).json({
@@ -99,11 +70,6 @@ export const getTasks = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get single task by ID
- * @route   GET /api/v1/tasks/:id
- * @access  Private
- */
 export const getTask = async (req, res) => {
   try {
     const task = await Task.findById(req.params.id).populate(
@@ -118,7 +84,6 @@ export const getTask = async (req, res) => {
       });
     }
 
-    // Check if user is authorized to view this task
     if (
       req.user.role !== 'admin' &&
       task.createdBy._id.toString() !== req.user._id.toString()
@@ -145,11 +110,6 @@ export const getTask = async (req, res) => {
   }
 };
 
-/**
- * @desc    Update task
- * @route   PUT /api/v1/tasks/:id
- * @access  Private
- */
 export const updateTask = async (req, res) => {
   try {
     let task = await Task.findById(req.params.id);
@@ -161,7 +121,6 @@ export const updateTask = async (req, res) => {
       });
     }
 
-    // Check if user is authorized to update this task
     if (
       req.user.role !== 'admin' &&
       task.createdBy.toString() !== req.user._id.toString()
@@ -172,7 +131,6 @@ export const updateTask = async (req, res) => {
       });
     }
 
-    // Update task
     task = await Task.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true
@@ -195,11 +153,6 @@ export const updateTask = async (req, res) => {
   }
 };
 
-/**
- * @desc    Delete task
- * @route   DELETE /api/v1/tasks/:id
- * @access  Private
- */
 export const deleteTask = async (req, res) => {
   try {
     const task = await Task.findById(req.params.id);
@@ -211,7 +164,6 @@ export const deleteTask = async (req, res) => {
       });
     }
 
-    // Check if user is authorized to delete this task
     if (
       req.user.role !== 'admin' &&
       task.createdBy.toString() !== req.user._id.toString()
@@ -239,16 +191,9 @@ export const deleteTask = async (req, res) => {
   }
 };
 
-/**
- * @desc    Get task statistics
- * @route   GET /api/v1/tasks/stats
- * @access  Private
- */
 export const getTaskStats = async (req, res) => {
   try {
     let query = {};
-
-    // Non-admin users can only see their own task stats
     if (req.user.role !== 'admin') {
       query.createdBy = req.user._id;
     }

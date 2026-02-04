@@ -79,7 +79,7 @@ npm start
 
 The server will run on http://localhost:5000
 
-## 📚 API Documentation
+## API Documentation
 
 ### Swagger Documentation
 Access interactive API documentation at: `http://localhost:5000/api-docs`
@@ -176,7 +176,7 @@ GET /api/v1/tasks/stats
 Authorization: Bearer <token>
 ```
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### User Model
 ```javascript
@@ -205,7 +205,7 @@ Authorization: Bearer <token>
 }
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 backend/
@@ -232,7 +232,7 @@ backend/
 └── server.js               # Application entry point
 ```
 
-## 🔐 Security Features
+## Security Features
 
 1. **Password Security**
    - Passwords hashed with bcrypt (10 salt rounds)
@@ -255,7 +255,7 @@ backend/
    - Helmet middleware for HTTP headers
    - CORS configuration
 
-## 🚀 Scalability Considerations
+## Scalability Considerations
 
 ### Current Architecture
 - Modular MVC structure
@@ -290,7 +290,7 @@ backend/
    - CI/CD pipeline
    - Cloud deployment (AWS, Azure, GCP)
 
-## 🧪 Testing
+## Testing
 
 Create test files in a `tests/` directory:
 
@@ -298,7 +298,7 @@ Create test files in a `tests/` directory:
 npm install --save-dev jest supertest
 ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 Create a `Dockerfile`:
 
@@ -318,7 +318,7 @@ docker build -t primetrade-backend .
 docker run -p 5000:5000 --env-file .env primetrade-backend
 ```
 
-## 📝 Environment Variables
+## Environment Variables
 
 | Variable | Description | Default |
 |----------|-------------|---------|
@@ -329,7 +329,7 @@ docker run -p 5000:5000 --env-file .env primetrade-backend
 | JWT_EXPIRE | Token expiration | 7d |
 | CLIENT_URL | Frontend URL for CORS | http://localhost:3000 |
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch
@@ -337,10 +337,10 @@ docker run -p 5000:5000 --env-file .env primetrade-backend
 4. Push to the branch
 5. Create a Pull Request
 
-## 📄 License
+## License
 
 MIT License
 
-## 👨‍💻 Author
+## Author
 
 Ayush Kesharwani

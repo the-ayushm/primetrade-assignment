@@ -110,7 +110,6 @@ const Dashboard = () => {
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-8 gap-4">
           <div>
             <h1 className="text-3xl font-bold text-gray-800">Task Dashboard</h1>
@@ -125,7 +124,6 @@ const Dashboard = () => {
           </button>
         </div>
 
-        {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {statsCards.map((stat, index) => (
             <div
@@ -145,7 +143,6 @@ const Dashboard = () => {
           ))}
         </div>
 
-        {/* Filter Tabs */}
         <div className="bg-white rounded-lg shadow-md p-2 mb-6 inline-flex space-x-2">
           {['all', 'pending', 'in-progress', 'completed'].map((status) => (
             <button
@@ -162,7 +159,6 @@ const Dashboard = () => {
           ))}
         </div>
 
-        {/* Tasks Grid */}
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
@@ -198,7 +194,6 @@ const Dashboard = () => {
         )}
       </div>
 
-      {/* Task Modal */}
       {isModalOpen && (
         <TaskModal
           task={editingTask}

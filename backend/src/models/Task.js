@@ -1,9 +1,4 @@
 import mongoose from 'mongoose';
-
-/**
- * Task Schema
- * Secondary entity for demonstrating CRUD operations
- */
 const taskSchema = new mongoose.Schema(
   {
     title: {
@@ -42,26 +37,13 @@ const taskSchema = new mongoose.Schema(
     timestamps: true
   }
 );
-
-/**
- * Index for better query performance
- * Create compound index on createdBy and status for common queries
- */
 taskSchema.index({ createdBy: 1, status: 1 });
-
-/**
- * Virtual field to check if task is overdue
- */
 taskSchema.virtual('isOverdue').get(function () {
   if (!this.dueDate || this.status === 'completed') {
     return false;
   }
   return new Date() > this.dueDate;
 });
-
-/**
- * Ensure virtuals are included in JSON output
- */
 taskSchema.set('toJSON', { virtuals: true });
 taskSchema.set('toObject', { virtuals: true });
 

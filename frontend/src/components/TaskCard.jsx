@@ -31,7 +31,6 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
 
   return (
     <div className="card group hover:border-primary-200 border-2 border-transparent">
-      {/* Header */}
       <div className="flex justify-between items-start mb-3">
         <h3 className="text-lg font-semibold text-gray-800 line-clamp-1">
           {task.title}
@@ -54,12 +53,10 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
         </div>
       </div>
 
-      {/* Description */}
       <p className="text-gray-600 text-sm mb-4 line-clamp-2">
         {task.description}
       </p>
 
-      {/* Badges */}
       <div className="flex flex-wrap gap-2 mb-4">
         <span className={getStatusBadgeClass(task.status)}>
           {task.status === 'in-progress' ? 'In Progress' : task.status}
@@ -69,7 +66,6 @@ const TaskCard = ({ task, onEdit, onDelete }) => {
         </span>
       </div>
 
-      {/* Footer */}
       <div className="flex items-center justify-between text-sm text-gray-500 pt-4 border-t border-gray-100">
         <div className="flex items-center space-x-1">
           <Calendar size={14} />

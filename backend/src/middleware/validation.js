@@ -1,8 +1,5 @@
 import { body, validationResult } from 'express-validator';
 
-/**
- * Validation Rules for User Registration
- */
 export const registerValidation = [
   body('name')
     .trim()
@@ -33,9 +30,6 @@ export const registerValidation = [
     .withMessage('Role must be either user or admin')
 ];
 
-/**
- * Validation Rules for User Login
- */
 export const loginValidation = [
   body('email')
     .trim()
@@ -50,9 +44,6 @@ export const loginValidation = [
     .withMessage('Password is required')
 ];
 
-/**
- * Validation Rules for Task Creation/Update
- */
 export const taskValidation = [
   body('title')
     .trim()
@@ -84,10 +75,6 @@ export const taskValidation = [
     .withMessage('Due date must be a valid date')
 ];
 
-/**
- * Middleware to check validation results
- * Returns errors if validation fails
- */
 export const validate = (req, res, next) => {
   const errors = validationResult(req);
   

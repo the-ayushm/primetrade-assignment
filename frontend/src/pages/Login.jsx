@@ -35,7 +35,6 @@ const Login = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 px-4">
       <div className="max-w-md w-full">
-        {/* Logo and Title */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 rounded-2xl mb-4">
             <span className="text-3xl font-bold text-white">P</span>
@@ -44,10 +43,8 @@ const Login = () => {
           <p className="text-gray-600 mt-2">Sign in to your account</p>
         </div>
 
-        {/* Login Form */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Email Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
@@ -68,7 +65,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Password Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
@@ -89,7 +85,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
@@ -106,7 +101,6 @@ const Login = () => {
             </button>
           </form>
 
-          {/* Register Link */}
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Don't have an account?{' '}

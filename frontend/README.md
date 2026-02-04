@@ -2,19 +2,19 @@
 
 A modern, responsive React application with Tailwind CSS for managing tasks with authentication and role-based access.
 
-## 🚀 Features
+## Features
 
-- ✅ User authentication (Login/Register)
-- ✅ Protected routes with JWT
-- ✅ Role-based UI (User & Admin views)
-- ✅ Complete task CRUD operations
-- ✅ Task filtering and statistics
-- ✅ Responsive design with Tailwind CSS
-- ✅ Toast notifications
-- ✅ Modern UI/UX with animations
-- ✅ Admin user management dashboard
+- User authentication (Login/Register)
+- Protected routes with JWT
+- Role-based UI (User & Admin views)
+- Complete task CRUD operations
+- Task filtering and statistics
+- Responsive design with Tailwind CSS
+- Toast notifications
+- Modern UI/UX with animations
+- Admin user management dashboard
 
-## 🛠️ Technologies
+## Technologies
 
 - **React 18** - UI library
 - **React Router DOM** - Client-side routing
@@ -24,13 +24,13 @@ A modern, responsive React application with Tailwind CSS for managing tasks with
 - **React Hot Toast** - Toast notifications
 - **Lucide React** - Icon library
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Node.js (v14 or higher)
 - npm or yarn
 - Backend API running on `http://localhost:5000`
 
-## 🛠️ Installation
+## Installation
 
 1. **Navigate to frontend directory**
 ```bash
@@ -49,7 +49,7 @@ npm run dev
 
 The app will run on `http://localhost:3000`
 
-## 🏗️ Build for Production
+## Build for Production
 
 ```bash
 npm run build
@@ -60,7 +60,7 @@ Preview production build:
 npm run preview
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 frontend/
@@ -90,7 +90,7 @@ frontend/
 └── postcss.config.js
 ```
 
-## 🎨 UI Components
+## UI Components
 
 ### Pages
 
@@ -106,7 +106,7 @@ frontend/
 3. **TaskModal** - Create/edit task form
 4. **ProtectedRoute** - Route authentication wrapper
 
-## 🔐 Authentication Flow
+## Authentication Flow
 
 1. User registers/logs in
 2. JWT token stored in localStorage
@@ -114,7 +114,7 @@ frontend/
 4. Auto-redirect on token expiration
 5. Protected routes check authentication
 
-## 📱 Responsive Design
+## Responsive Design
 
 - Mobile-first approach
 - Breakpoints:
@@ -123,7 +123,7 @@ frontend/
   - lg: 1024px
   - xl: 1280px
 
-## 🎨 Tailwind Configuration
+## Tailwind Configuration
 
 Custom colors and animations defined in `tailwind.config.js`:
 
@@ -137,7 +137,7 @@ Animations:
 - slide-up
 ```
 
-## 🔄 API Integration
+## API Integration
 
 API service located in `src/services/api.js`:
 
@@ -157,7 +157,7 @@ taskAPI.deleteTask(id)
 taskAPI.getStats()
 ```
 
-## 🎯 Features in Detail
+## Features in Detail
 
 ### Dashboard
 - Task statistics cards
@@ -183,7 +183,7 @@ taskAPI.getStats()
 - User statistics
 - Active/inactive status
 
-## 🎨 Custom Tailwind Classes
+## Custom Tailwind Classes
 
 Defined in `index.css`:
 
@@ -196,7 +196,7 @@ Defined in `index.css`:
 .badge-*        - Status/priority badges
 ```
 
-## 🔒 Security Features
+## Security Features
 
 1. **Token Management**
    - Secure storage in localStorage
@@ -213,7 +213,7 @@ Defined in `index.css`:
    - Error message display
    - Form sanitization
 
-## 🚀 Performance Optimizations
+## Performance Optimizations
 
 1. **Code Splitting**
    - Route-based splitting
@@ -227,7 +227,7 @@ Defined in `index.css`:
    - Context API for global state
    - Minimal re-renders
 
-## 🎨 Design System
+## Design System
 
 ### Colors
 - Primary: Blue (#3b82f6)
@@ -241,7 +241,7 @@ Defined in `index.css`:
 - Headings: Bold
 - Body: Regular
 
-## 📦 Dependencies
+## Dependencies
 
 ### Core
 - react: ^18.2.0
@@ -262,7 +262,7 @@ Defined in `index.css`:
 - autoprefixer: ^10.4.16
 - postcss: ^8.4.33
 
-## 🔧 Configuration Files
+## Configuration Files
 
 ### vite.config.js
 ```javascript
@@ -284,7 +284,7 @@ Defined in `index.css`:
 - Autoprefixer
 ```
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### Port already in use
 ```bash
@@ -304,14 +304,14 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
-## 📱 Browser Support
+## Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
 
-## 🎯 Future Enhancements
+## Future Enhancements
 
 1. **Features**
    - Real-time updates with WebSockets
@@ -331,7 +331,7 @@ npm install
    - Drag-and-drop task ordering
    - Advanced animations
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch
@@ -339,10 +339,10 @@ npm install
 4. Push to the branch
 5. Create a Pull Request
 
-## 📄 License
+## License
 
 MIT License
 
-## 👨‍💻 Author
+## Author
 
 Ayush Kesharwani

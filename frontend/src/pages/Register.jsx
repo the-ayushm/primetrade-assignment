@@ -37,16 +37,13 @@ const Register = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-primary-50 to-primary-100 px-4">
       <div className="max-w-md w-full">
-        {/* Logo and Title */}
         <div className="text-center mb-8">
           
           <h2 className="text-3xl font-bold text-gray-800">Create Account</h2>
         </div>
 
-        {/* Register Form */}
         <div className="bg-white rounded-2xl shadow-xl p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Name Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Full Name
@@ -67,7 +64,6 @@ const Register = () => {
               </div>
             </div>
 
-            {/* Email Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Email Address
@@ -88,7 +84,6 @@ const Register = () => {
               </div>
             </div>
 
-            {/* Password Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Password
@@ -113,7 +108,6 @@ const Register = () => {
               </p>
             </div>
 
-            {/* Role Field */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Account Type
@@ -129,7 +123,6 @@ const Register = () => {
               </select>
             </div>
 
-            {/* Submit Button */}
             <button
               type="submit"
               disabled={loading}
@@ -146,7 +139,6 @@ const Register = () => {
             </button>
           </form>
 
-          {/* Login Link */}
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Already have an account?{' '}

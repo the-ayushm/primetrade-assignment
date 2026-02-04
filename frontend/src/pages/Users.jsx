@@ -36,7 +36,6 @@ const Users = () => {
       <Navbar />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Header */}
         <div className="mb-8">
           <div className="flex items-center space-x-3 mb-2">
             <UsersIcon size={32} className="text-primary-600" />
@@ -45,7 +44,6 @@ const Users = () => {
           <p className="text-gray-600">View and manage all registered users</p>
         </div>
 
-        {/* Users Table */}
         {loading ? (
           <div className="flex justify-center items-center py-20">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
@@ -140,7 +138,6 @@ const Users = () => {
           </div>
         )}
 
-        {/* Stats */}
         {!loading && users.length > 0 && (
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-white rounded-lg shadow-md p-4">

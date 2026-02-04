@@ -75,7 +75,7 @@ This project is a complete implementation of the Backend Developer Internship as
 - npm or yarn
 - Git
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone the Repository
 
@@ -124,7 +124,7 @@ npm run dev
 
 Frontend will run on `http://localhost:3000`
 
-## 📚 API Documentation
+## API Documentation
 
 ### Swagger Documentation
 Access interactive API documentation at: **http://localhost:5000/api-docs**
@@ -149,7 +149,7 @@ DELETE /api/v1/tasks/:id      - Delete task (Protected)
 GET    /api/v1/tasks/stats    - Get task statistics (Protected)
 ```
 
-## 🗄️ Database Schema
+## Database Schema
 
 ### User Collection
 ```javascript
@@ -178,7 +178,7 @@ GET    /api/v1/tasks/stats    - Get task statistics (Protected)
 }
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 primetrade-assignment/
@@ -232,7 +232,7 @@ primetrade-assignment/
     └── README.md
 ```
 
-## 🔐 Security Features
+## Security Features
 
 1. **Authentication**
    - JWT-based authentication
@@ -254,7 +254,7 @@ primetrade-assignment/
    - CORS configuration
    - Rate limiting (100 requests/15 minutes)
 
-## 🚀 Scalability Considerations
+## Scalability Considerations
 
 ### Current Implementation
 - **Modular Architecture**: Separation of concerns with MVC pattern
@@ -300,7 +300,7 @@ primetrade-assignment/
    - Centralized logging (ELK stack)
    - Error tracking (Sentry)
 
-## 🧪 Testing
+## Testing
 
 ### Backend Testing
 ```bash
@@ -316,7 +316,7 @@ npm install --save-dev vitest @testing-library/react
 npm test
 ```
 
-## 🐳 Docker Deployment
+## Docker Deployment
 
 ### Backend Dockerfile
 ```dockerfile
@@ -368,7 +368,7 @@ services:
       - backend
 ```
 
-## 📊 Demo Credentials
+## Demo Credentials
 
 ### Admin User
 - Email: `admin@primetrade.com`
@@ -380,9 +380,9 @@ services:
 
 *Note: Create these users after starting the application*
 
-## 🎯 Assignment Requirements Checklist
+## Assignment Requirements Checklist
 
-### Backend ✅
+### Backend
 - [x] User registration & login APIs
 - [x] Password hashing
 - [x] JWT authentication
@@ -394,20 +394,20 @@ services:
 - [x] API documentation (Swagger)
 - [x] Database schema (MongoDB)
 
-### Frontend ✅
+### Frontend
 - [x] Built with React.js
 - [x] Register & login UI
 - [x] Protected dashboard (JWT required)
 - [x] CRUD operations UI for tasks
 - [x] Error/success messages from API
 
-### Security & Scalability ✅
+### Security & Scalability
 - [x] Secure JWT token handling
 - [x] Input sanitization & validation
 - [x] Scalable project structure
 - [x] Scalability documentation
 
-## 📝 Environment Variables
+## Environment Variables
 
 ### Backend (.env)
 ```env
@@ -419,7 +419,7 @@ JWT_EXPIRE=7d
 CLIENT_URL=http://localhost:3000
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -427,17 +427,17 @@ CLIENT_URL=http://localhost:3000
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License.
 
-## 👨‍💻 Author
+## Author
 
 - Ayush Kesharwani
 - Email: ayushml1247@gmail.com
 
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - PrimeTrade for the internship opportunity
 - MongoDB documentation
@@ -445,4 +445,4 @@ This project is licensed under the MIT License.
 - Express.js framework
 
 
-**Built with ❤️ for PrimeTrade Backend Developer Internship Assignment**
+Built for PrimeTrade Backend Developer Internship Assignment

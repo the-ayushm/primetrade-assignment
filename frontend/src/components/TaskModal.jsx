@@ -56,7 +56,6 @@ const TaskModal = ({ task, onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
       <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
-        {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
           <h2 className="text-2xl font-bold text-gray-800">
             {task ? 'Edit Task' : 'Create New Task'}
@@ -69,9 +68,7 @@ const TaskModal = ({ task, onClose }) => {
           </button>
         </div>
 
-        {/* Form */}
         <form onSubmit={handleSubmit} className="p-6 space-y-5">
-          {/* Title */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Task Title *
@@ -87,7 +84,6 @@ const TaskModal = ({ task, onClose }) => {
             />
           </div>
 
-          {/* Description */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Description *
@@ -103,9 +99,7 @@ const TaskModal = ({ task, onClose }) => {
             />
           </div>
 
-          {/* Status and Priority Row */}
           <div className="grid grid-cols-2 gap-4">
-            {/* Status */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Status
@@ -122,7 +116,6 @@ const TaskModal = ({ task, onClose }) => {
               </select>
             </div>
 
-            {/* Priority */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-2">
                 Priority
@@ -140,7 +133,6 @@ const TaskModal = ({ task, onClose }) => {
             </div>
           </div>
 
-          {/* Due Date */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
               Due Date
@@ -154,7 +146,6 @@ const TaskModal = ({ task, onClose }) => {
             />
           </div>
 
-          {/* Buttons */}
           <div className="flex space-x-3 pt-4">
             <button
               type="button"

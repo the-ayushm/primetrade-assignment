@@ -16,7 +16,6 @@ const Navbar = () => {
     <nav className="bg-white shadow-md sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link to="/dashboard" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">P</span>
@@ -24,7 +23,6 @@ const Navbar = () => {
             <span className="text-xl font-bold text-gray-800">PrimeTrade</span>
           </Link>
 
-          {/* Navigation Links */}
           <div className="flex items-center space-x-4">
             <Link
               to="/dashboard"
@@ -44,7 +42,6 @@ const Navbar = () => {
               </Link>
             )}
 
-            {/* User Menu */}
             <div className="flex items-center space-x-3 pl-4 border-l border-gray-200">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center">
