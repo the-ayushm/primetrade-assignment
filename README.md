@@ -49,7 +49,7 @@ The project focuses on building a secure, modular backend with JWT authenticatio
 ---
 
 ## Project Structure
-
+```
 assignment/
 ├── backend/
 │   ├── models/
@@ -76,7 +76,7 @@ assignment/
 ├── .env.example
 └── README.md
 
-
+```
 
 ---
 
