@@ -51,69 +51,31 @@ The project focuses on building a secure, modular backend with JWT authenticatio
 ## Project Structure
 
 assignment/
-├── .git/
-├── .gitignore
 ├── backend/
-│   ├── .env
-│   ├── .env.example
-│   ├── .gitignore
-│   ├── node_modules/
-│   ├── package-lock.json
+│   ├── models/
+│   ├── controllers/
+│   ├── services/
+│   ├── routes/
+│   ├── middlewares/
+│   ├── utils/
+│   ├── app.js
+│   ├── server.js
 │   ├── package.json
-│   ├── README.md
-│   └── src/
-│       ├── config/
-│       │   ├── database.js
-│       │   └── swagger.js
-│       ├── controllers/
-│       │   ├── authController.js
-│       │   └── taskController.js
-│       ├── middleware/
-│       │   ├── auth.js
-│       │   ├── errorHandler.js
-│       │   └── validation.js
-│       ├── models/
-│       │   ├── Task.js
-│       │   └── User.js
-│       ├── routes/
-│       │   ├── authRoutes.js
-│       │   └── taskRoutes.js
-│       ├── utils/
-│       │   └── apiResponse.js
-│       └── server.js
-├── docs/
+│   └── README.md
 ├── frontend/
-│   ├── .env.local
-│   ├── .env.production
-│   ├── .gitignore
-│   ├── index.html
-│   ├── node_modules/
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── postcss.config.js
-│   ├── README.md
 │   ├── src/
-│   │   ├── App.jsx
-│   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── ProtectedRoute.jsx
-│   │   │   ├── TaskCard.jsx
-│   │   │   └── TaskModal.jsx
-│   │   ├── context/
-│   │   │   └── AuthContext.jsx
-│   │   ├── index.css
-│   │   ├── main.jsx
 │   │   ├── pages/
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── Register.jsx
-│   │   │   └── Users.jsx
+│   │   ├── components/
 │   │   └── services/
-│   │       └── api.js
-│   ├── tailwind.config.js
-│   └── vite.config.js
-├── PrimeTrade_API_Collection.postman_collection.json
+│   ├── App.jsx
+│   └── README.md
+├── docs/
+│   ├── SETUP.md
+│   ├── SCALABILITY.md
+│   └── SUBMISSION.md
+├── .env.example
 └── README.md
+
 
 
 ---
